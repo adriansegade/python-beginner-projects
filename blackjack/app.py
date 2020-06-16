@@ -1,6 +1,13 @@
 from card import Card
+from deck import Deck
 
-try:
-    card = Card('spades', )
-except Exception as e:
-    print(f'Exception when creating card: {e}')
+
+def main():
+    deck = Deck('FRENCH_DECK')
+    print(deck.__str__())
+    deck.shuffle()
+    print(deck.__str__())
+
+
+if __name__ == '__main__':
+    main()
